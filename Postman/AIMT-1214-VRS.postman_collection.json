@@ -1,0 +1,579 @@
+{
+	"info": {
+		"_postman_id": "8ce892ed-dd80-4acb-b7d2-34b49d608922",
+		"name": "AIMT-1214-VRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5012028"
+	},
+	"item": [
+		{
+			"name": "Dataset",
+			"item": [
+				{
+					"name": "saveMovie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"title\": \"Movie Title Part 123\",\r\n    \"overview\": \"overview\",\r\n    \"keywords\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"keywords test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"keywords test\"\r\n        }\r\n    ],\r\n    \"genres\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"genre test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"genre test\"\r\n        }\r\n    ],\r\n    \"original_language\": \"en\",\r\n    \"director\": \"Director\",\r\n    \"cast\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Vandre\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 0\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Vandre 2\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 1\r\n        }\r\n    ],\r\n    \"status\": \"Released\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/save",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8181",
+							"path": [
+								"vrs",
+								"dataset",
+								"companyABC",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDatasetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8181",
+									"path": [
+										"vrs",
+										"dataset",
+										"companyABC"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Vinicius"
+										},
+										{
+											"key": "status",
+											"value": "N"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
+						}
+					]
+				},
+				{
+					"name": "GetMovies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8181",
+							"path": [
+								"vrs",
+								"dataset",
+								"companyABC",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "New",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDatasetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8181",
+									"path": [
+										"vrs",
+										"dataset",
+										"companyABC"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Vinicius"
+										},
+										{
+											"key": "status",
+											"value": "N"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
+						}
+					]
+				},
+				{
+					"name": "DelMovies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/3/del",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8181",
+							"path": [
+								"vrs",
+								"dataset",
+								"companyABC",
+								"3",
+								"del"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "New",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDatasetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8181",
+									"path": [
+										"vrs",
+										"dataset",
+										"companyABC"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Vinicius"
+										},
+										{
+											"key": "status",
+											"value": "N"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Model",
+			"item": [
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8181/vrs/model/movies_db/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8181",
+							"path": [
+								"vrs",
+								"model",
+								"movies_db",
+								"create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "New",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDatasetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8181",
+									"path": [
+										"vrs",
+										"dataset",
+										"companyABC"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Vinicius"
+										},
+										{
+											"key": "status",
+											"value": "N"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Recommendation",
+			"item": [
+				{
+					"name": "GetRecommendation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8181/vrs/recommendation/movies_db/The Scorpion King",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8181",
+							"path": [
+								"vrs",
+								"recommendation",
+								"movies_db",
+								"The Scorpion King"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetDatasetById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8181",
+									"path": [
+										"vrs",
+										"dataset",
+										"companyABC"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Vinicius"
+										},
+										{
+											"key": "status",
+											"value": "N"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/2.2.1 Python/3.10.4"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
