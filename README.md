@@ -5,7 +5,7 @@
 ### Group Name
 > The Py Troop
 ### Group members
-> Hemanth Reddy Ramireddy 
-> Saramsa Prasad Sherchan 
-> Vijay Seelam 
-> Vinicius Vandre Lopes 
+> Hemanth Reddy Ramireddy   
+> Saramsa Prasad Sherchan  
+> Vijay Seelam  
+> Vinicius Vandre Lopes   
