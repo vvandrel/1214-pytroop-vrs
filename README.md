@@ -1,2 +1,11 @@
-# 1214-pytroop-vrs
-1214-Python Programming Final Term Project - Video Recommendation System
+# AML 1214 - Python Programming
+## AIMT - 2022S - Section 1
+### Term Project: 
+> Movie Recommendation System – Content-Based
+### Group Name
+> The Py Troop
+### Group members
+> Hemanth Reddy Ramireddy (C0861153)  
+> Saramsa Prasad Sherchan (C0859401)  
+> Vijay Seelam (C0857329)  
+> Vinicius Vandre Lopes (C0855070)  
