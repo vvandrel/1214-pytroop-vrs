@@ -34,8 +34,11 @@ def find_all(customer_id, movie_filters):
         else:
             if 'title' in movie_filters:
                 df_all = df_all[df_all["title"].str.contains(movie_filters['title'])]
+            if 'director' in movie_filters:
+                df_all = df_all[df_all["director"].notnull()]
+                df_all = df_all[df_all["director"].str.contains(movie_filters['director'])]
             if 'status' in movie_filters:
-                df_all = df_all[df_all["status"].str.contains(movie_filters['status'])]
+                df_all = df_all[df_all["status"] == movie_filters['status']]
     return df_all
 
 
