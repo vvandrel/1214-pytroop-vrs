@@ -1,10 +1,14 @@
 from flask import Flask, request, jsonify
 from flask_restful import Api
 from vrs_movie_data import MovieData
+from vrs_utils import log
 import vrs_dataset as vrs_ds
 import vrs_ml_model as vrs_ml
 import vrs_recommendation as vrs_rec
 import vrs_utils as vrs_utils
+
+
+__module = '[VRS-GATEWAY]'
 
 app = Flask(__name__)
 api = Api(app)
@@ -60,7 +64,9 @@ def get_movies_recommendation(customer_id, movie_title):
 
 
 def vrs_gateway_run(host='0.0.0.0', port=8181, debug=False):
+    log(__module, 'VRS starting ... ')
     app.run(host=host, port=port, debug=debug)
+    log(__module, 'VRS shutdown')
 
 
 if __name__ == '__main__':

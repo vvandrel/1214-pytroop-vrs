@@ -1,4 +1,14 @@
 from vrs_movie_data import MovieData, MovieKeywords, MovieGenre
+from datetime import datetime
+
+
+def get_date():
+    return datetime.now().strftime('%Y-%m-%d %H:%M:%S ')
+
+
+def log(module, description, level='INFO'):
+    _level = 'UNKNOWN' if level != 'INFO' and level != 'WARN' and level != 'ERROR' else level
+    print(f'{module} :: [{_level}] :: {get_date()} :: {description}')
 
 
 def get_movie_keywords_from_json(keywords_js):
@@ -67,4 +77,3 @@ def create_movies_list_from_df(df):
         mv.status = row['status']
         movies_list.append(mv.__dict__)
     return movies_list
-
