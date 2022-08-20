@@ -4,8 +4,6 @@
 > Movie Recommendation System – Content-Based
 ### Group Name
 > The Py Troop
-### Group members
-> Hemanth Reddy Ramireddy   
-> Saramsa Prasad Sherchan  
-> Vijay Seelam  
-> Vinicius Vandre Lopes   
+
+# Start the application
+run the file main.py
