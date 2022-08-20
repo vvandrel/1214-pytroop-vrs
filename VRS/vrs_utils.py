@@ -3,18 +3,17 @@ from datetime import datetime
 
 
 def get_date():
-    return datetime.now().strftime('%Y-%m-%d %H:%M:%S ')
+    return datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
-def log(module, description, level='INFO'):
+def log(module, customer_id, description, level='INFO'):
     _level = 'UNKNOWN' if level != 'INFO' and level != 'WARN' and level != 'ERROR' else level
-    print(f'{module} :: [{_level}] :: {get_date()} :: {description}')
+    print(f'{get_date()} :: {module} :: [{customer_id}] :: [{_level}] :: {description}')
 
 
 def get_movie_keywords_from_json(keywords_js):
     lst_keyw = []
     for keyword in keywords_js:
-        print(keyword)
         mv_keyw = MovieKeywords()
         mv_keyw.id = keyword['id']
         mv_keyw.name = keyword['name']
