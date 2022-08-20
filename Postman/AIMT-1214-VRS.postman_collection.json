@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 0,\r\n    \"title\": \"Movie Title Part 123\",\r\n    \"overview\": \"overview\",\r\n    \"keywords\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"keywords test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"keywords test\"\r\n        }\r\n    ],\r\n    \"genres\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"genre test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"genre test\"\r\n        }\r\n    ],\r\n    \"original_language\": \"en\",\r\n    \"director\": \"Director\",\r\n    \"cast\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Vandre\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 0\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Vandre 2\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 1\r\n        }\r\n    ],\r\n    \"status\": \"Released\"\r\n}",
+							"raw": "{\r\n    \"id\": 0,\r\n    \"title\": \"Movie Title Part 1\",\r\n    \"overview\": \"overview correctly\",\r\n    \"keywords\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"keywords test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"keywords test\"\r\n        },\r\n        {\r\n            \"id\": 3,\r\n            \"name\": \"keywords test 3\"\r\n        }\r\n    ],\r\n    \"genres\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"genre test\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"genre test\"\r\n        }\r\n    ],\r\n    \"original_language\": \"en\",\r\n    \"director\": \"Director\",\r\n    \"cast\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"Vandre\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 0\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Vandre 2\",\r\n            \"cast_id\": 0,\r\n            \"character\": \"\",\r\n            \"credit_id\": \"\",\r\n            \"gender\": 1,\r\n            \"order\": 1\r\n        }\r\n    ],\r\n    \"status\": \"Released\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,7 +24,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/save",
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyA/save",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -36,7 +36,7 @@
 							"path": [
 								"vrs",
 								"dataset",
-								"companyABC",
+								"companyA",
 								"save"
 							]
 						}
@@ -131,7 +131,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/1",
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyA",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -143,13 +143,22 @@
 							"path": [
 								"vrs",
 								"dataset",
-								"companyABC",
-								"1"
+								"companyA"
 							],
 							"query": [
 								{
-									"key": "name",
-									"value": "New",
+									"key": "title",
+									"value": "Avatar",
+									"disabled": true
+								},
+								{
+									"key": "director",
+									"value": "James",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "Released",
 									"disabled": true
 								}
 							]
@@ -245,7 +254,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC/3/del",
+							"raw": "http://127.0.0.1:8181/vrs/dataset/companyA/2/del",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -257,8 +266,8 @@
 							"path": [
 								"vrs",
 								"dataset",
-								"companyABC",
-								"3",
+								"companyA",
+								"2",
 								"del"
 							],
 							"query": [
@@ -365,7 +374,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8181/vrs/model/movies_db/create",
+							"raw": "http://127.0.0.1:8181/vrs/model/lambtonflix/create",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -377,7 +386,7 @@
 							"path": [
 								"vrs",
 								"model",
-								"movies_db",
+								"lambtonflix",
 								"create"
 							],
 							"query": [
@@ -484,7 +493,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8181/vrs/recommendation/movies_db/The Scorpion King",
+							"raw": "http://127.0.0.1:8181/vrs/recommendation/movies_db/Avatar",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -497,81 +506,11 @@
 								"vrs",
 								"recommendation",
 								"movies_db",
-								"The Scorpion King"
+								"Avatar"
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "GetDatasetById",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"ClientName\": \"HostMngN3\",\r\n    \"ClientStatus\": \"OK\",\r\n    \"ClientStatusError\": [\r\n        \"Error\", \"erro2\"\r\n    ],\r\n    \"ClientLastRecordProcessed\": \"2021-08-27 14:50:00.021\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://127.0.0.1:8181/vrs/dataset/companyABC?name=Vinicius&status=N",
-									"protocol": "http",
-									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
-									],
-									"port": "8181",
-									"path": [
-										"vrs",
-										"dataset",
-										"companyABC"
-									],
-									"query": [
-										{
-											"key": "name",
-											"value": "Vinicius"
-										},
-										{
-											"key": "status",
-											"value": "N"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "html",
-							"header": [
-								{
-									"key": "Server",
-									"value": "Werkzeug/2.2.1 Python/3.10.4"
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 31 Jul 2022 21:05:44 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "228"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								}
-							],
-							"cookie": [],
-							"body": "[{\"id\":1,\"name\":\"Avengers End Game\"},{\"id\":2,\"name\":\"Avengers\"},{\"id\":3,\"name\":\"Avengers2\"},{\"id\":4,\"name\":\"Avengers\"},{\"id\":5,\"name\":\"Avengers2\"},{\"id\":6,\"name\":\"Avengers\"},{\"id\":7,\"name\":\"Avengers\"},{\"id\":8,\"name\":\"Avengers\"}]"
-						}
-					]
+					"response": []
 				}
 			]
 		}
