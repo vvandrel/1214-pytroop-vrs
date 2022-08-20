@@ -7,3 +7,7 @@
 
 # Start the application
 run the file main.py
+
+# Test the application
+Use the postman application with the postman file exported. 
+../Postman/AIMT-1214-VRS.postman_collection.json
